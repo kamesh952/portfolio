@@ -10,9 +10,9 @@ const projects = [
     title: "Tourism E-commerce Website",
     category: "web",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-    tags: ["Front End", "Node.js"],
-    githubLink: "https://github.com/yourusername/tourism-website",
-    liveLink: "https://your-tourism-website.com" // Add your live preview link
+    tags: ["Front End", "UI/UX","Vite/React"],
+    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
+    liveLink: "https://kalm-holidays.onrender.com/" // Add your live preview link
   },
   {
     id: 2,
