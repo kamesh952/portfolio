@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Tourism E-commerce Website",
     category: "web",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
     tags: ["Front End", "UI/UX","Vite/React"],
     githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
     liveLink: "https://kalm-holidays.onrender.com/" // Add your live preview link
@@ -33,19 +33,20 @@ const projects = [
     liveLink: "https://kamesh952.github.io/Kalm_ChatBot/"
   },
   {
-    id: 4,
-    title: "KalmAura-An MERN Stack Shopping Project",
-    category: "other",
-    image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
-    tags: ["Mongo DB", "Node JS ", "Express JS", "React/Vite"],
-    githubLink: "https://github.com/kamesh952/Kalm-Aura.git",
-    liveLink: "https://kalm-aura-v9j1.vercel.app/" // Add your live preview link
-  },
+  id: 4,
+  title: "KalmAura - A MERN Stack Shopping Project",
+  category: "other",
+  image: "https://media.istockphoto.com/id/1293366109/photo/this-one-match-perfect-with-me.jpg?s=1024x1024&w=is&k=20&c=ljpyNgsm90gjZHYRuHWfLXU-PTZk7IERjJW5v3NZ70U=",
+  tags: ["MongoDB", "Node.js", "Express.js", "React (Vite)"],
+  githubLink: "https://github.com/kamesh952/Kalm-Aura.git",
+  liveLink: "https://kalm-aura-bk24.vercel.app/"
+}
+,
   {
     id: 5,
     title: "Kalm Photo Editor",
     category: "ml",
-    image: "https://images.pexels.com/photos/3584996/pexels-photo-3584996.jpeg",
+    image: "https://media.istockphoto.com/id/1405395631/photo/professional-retoucher-working-on-graphic-tablet-at-desk-in-office.jpg?s=612x612&w=is&k=20&c=Oox3Ep4fnW3RvHt2Wc5znu9UWJaDYouE4zDAIVkRnbo=",
     tags: ["Python-Flask", "Python-Streamlit ", "Python-CV"],
     githubLink: "https://github.com/kamesh952/Kalm_Photo_Editor.git",
     liveLink: "https://kalmphotoeditor.streamlit.app/"
