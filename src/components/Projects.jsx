@@ -34,12 +34,12 @@ const projects = [
   },
   {
     id: 4,
-    title: "Hotel Management System",
+    title: "KalmAura-An MERN Stack Shopping Project",
     category: "other",
     image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
-    tags: ["DBMS", "Python - Frontend", "SQL"],
-    githubLink: "https://github.com/yourusername/hotel-management",
-    liveLink: "https://your-hotel-management.com" // Add your live preview link
+    tags: ["Mongo DB", "Node JS ", "Express JS", "React/Vite"],
+    githubLink: "https://github.com/kamesh952/Kalm-Aura.git",
+    liveLink: "https://kalm-aura-v9j1.vercel.app/" // Add your live preview link
   },
   {
     id: 5,
