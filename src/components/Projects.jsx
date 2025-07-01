@@ -39,7 +39,7 @@ const projects = [
   image: "https://media.istockphoto.com/id/1293366109/photo/this-one-match-perfect-with-me.jpg?s=1024x1024&w=is&k=20&c=ljpyNgsm90gjZHYRuHWfLXU-PTZk7IERjJW5v3NZ70U=",
   tags: ["MongoDB", "Node.js", "Express.js", "React (Vite)"],
   githubLink: "https://github.com/kamesh952/Kalm-Aura.git",
-  liveLink: "https://kalm-aura-bk24.vercel.app/"
+  liveLink: "https://kalmaura-pi.vercel.app/"
 }
 ,
   {
