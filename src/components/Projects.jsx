@@ -13,7 +13,7 @@ const projects = [
     image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
     tags: ["Front End", "UI/UX", "Vite/React"],
     githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
-    liveLink: "https://kalm-holidays.onrender.com/",
+    liveLink: "https://kalmholidays.onrender.com/",
   },
   {
     id: 2,
