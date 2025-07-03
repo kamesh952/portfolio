@@ -67,7 +67,7 @@ const projects = [
     title: "AI Chatbot",
     category: "ml",
     image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
-    tags: ["Gemini API", "Python-Streamlit", "NLP"],
+    tags: ["Gemini API", "React/vite"],
     githubLink: "https://github.com/kamesh952/Kalm_ChatBot.git",
     liveLink: "https://kamesh952.github.io/Kalm_ChatBot/",
   },
