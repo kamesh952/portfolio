@@ -21,7 +21,7 @@ const projects = [
     category: "web",
     image: "erasex.jpg",
     tags: ["React", "API Integration", "Python"],
-    githubLink: "https://github.com/kamesh952/Erase_X.git",
+    githubLink: "https://github.com/kamesh952/Erase-X.git",
     liveLink: "https://kamesh952.github.io/Erase-X/",
   },
   {
