@@ -22,7 +22,7 @@ const projects = [
     image: "erasex.jpg",
     tags: ["React", "API Integration"],
     githubLink: "https://github.com/kamesh952/Erase-X.git",
-    liveLink: "https://kamesh952.github.io/Erase-X/",
+    liveLink: "https://erase-x.onrender.com/",
   },
   {
     id: 3,
