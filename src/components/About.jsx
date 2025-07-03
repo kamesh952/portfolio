@@ -86,7 +86,7 @@ const About = () => {
           >
             <Box
               component="img"
-              src="kamesh.jpg"
+              src="/kamesh.png"
               alt="Kamesh R"
               loading="lazy"
               sx={{
