@@ -20,7 +20,7 @@ const projects = [
     title: "Erase X Background Remover",
     category: "web",
     image: "erasex.jpg",
-    tags: ["React", "API Integration", "Python"],
+    tags: ["React", "API Integration"],
     githubLink: "https://github.com/kamesh952/Erase-X.git",
     liveLink: "https://kamesh952.github.io/Erase-X/",
   },
