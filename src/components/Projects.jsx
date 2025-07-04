@@ -55,12 +55,14 @@ const projects = [
   },
   {
     id: 6,
-    title: "KALM AI RESUME ANALYSER",
+    title: "Convert iQ - Image format Converter",
     category: "ml",
-    image: "https://images.pexels.com/photos/8293774/pexels-photo-8293774.jpeg",
+    image:
+      "https://content-management-files.canva.com/35bbc1b1-dc94-48c0-883f-1f0ffcb4fd8e/tools-feature_image-converter_lead_01_2x.jpg",
+
     tags: ["Python-Streamlit", "Gemini-API-Integration"],
-    githubLink: "https://github.com/kamesh952/Kalm_AI_Resume_Analyser.git",
-    liveLink: "https://kalmairesumeanalyser.streamlit.app/",
+    githubLink: "https://github.com/kamesh952/Convert-IQ.git",
+    liveLink: "https://convert-iq.onrender.com/",
   },
   {
     id: 7,
