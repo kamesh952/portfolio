@@ -345,7 +345,7 @@ const Projects = () => {
                           },
                         }}
                       >
-                        {filter === "ml" ? "Try Demo" : "Live Preview"}
+                        {filter === "ml" ? "Live Preview" : "Live Preview"}
                       </Button>
                       <Button
                         variant="outlined"
