@@ -8,17 +8,17 @@ import StarIcon from "@mui/icons-material/Star";
 const projects = [
   {
     id: 1,
-    title: "Tourism E-commerce Website",
-    category: "web",
-    image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
-    tags: ["Front End", "UI/UX", "Vite/React"],
+    title: "Version Text AI - Add text Behind Image ",
+    category: "ml",
+    image: "https://vheer.com/_next/image?url=%2Fimages%2FlandingPages%2Ftext_behind_image%2Fmain_image_1.webp&w=3840&q=75",
+    tags: ["HTML", "UI/UX", "Javascript"],
     githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
     liveLink: "https://kalmholidays.onrender.com/",
   },
   {
     id: 2,
     title: "Erase X Background Remover",
-    category: "web",
+    category: "ml",
     image: "erasex.jpg",
     tags: ["React", "API Integration"],
     githubLink: "https://github.com/kamesh952/Erase-X.git",
@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     title: "Hotel Database Management-DBMS Project",
     category: "web",
-    image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg", // Hotel reception with warm ambiance
+    image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
     tags: ["React", "Mongo DB", "Backend-Python"],
     githubLink: "https://github.com/kamesh952/AuraStays.git",
     liveLink: "https://aurastays.onrender.com/",
@@ -47,19 +47,17 @@ const projects = [
     id: 5,
     title: "Kalm Photo Editor",
     category: "ml",
-    image:
-      "https://media.istockphoto.com/id/1405395631/photo/professional-retoucher-working-on-graphic-tablet-at-desk-in-office.jpg?s=612x612&w=is&k=20&c=Oox3Ep4fnW3RvHt2Wc5znu9UWJaDYouE4zDAIVkRnbo=",
+    image: "https://media.istockphoto.com/id/1405395631/photo/professional-retoucher-working-on-graphic-tablet-at-desk-in-office.jpg?s=612x612&w=is&k=20&c=Oox3Ep4fnW3RvHt2Wc5znu9UWJaDYouE4zDAIVkRnbo=",
     tags: ["Python-Flask", "Python-Streamlit", "Python-CV"],
     githubLink: "https://github.com/kamesh952/Kalm_Photo_Editor.git",
     liveLink: "https://kalmphotoeditor.streamlit.app/",
+    
   },
   {
     id: 6,
     title: "Convert iQ - Image format Converter",
     category: "ml",
-    image:
-      "https://content-management-files.canva.com/35bbc1b1-dc94-48c0-883f-1f0ffcb4fd8e/tools-feature_image-converter_lead_01_2x.jpg",
-
+    image: "https://content-management-files.canva.com/35bbc1b1-dc94-48c0-883f-1f0ffcb4fd8e/tools-feature_image-converter_lead_01_2x.jpg",
     tags: ["Python-Streamlit", "Gemini-API-Integration"],
     githubLink: "https://github.com/kamesh952/Convert-IQ.git",
     liveLink: "https://convert-iq.onrender.com/",
@@ -72,6 +70,16 @@ const projects = [
     tags: ["Gemini API", "React/vite"],
     githubLink: "https://github.com/kamesh952/Kalm_ChatBot.git",
     liveLink: "https://kamesh952.github.io/Kalm_ChatBot/",
+  },
+  {
+    id: 8,
+    title: "Tourism E-commerce Website -  A MERN Stack Shopping Project",
+    category: "web",
+    image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
+   tags: ["Front End", "UI/UX", "Vite/React"],
+    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
+    liveLink: "https://kalmholidays.onrender.com/",
+    featured: true,
   },
 ];
 
@@ -170,7 +178,7 @@ const Projects = () => {
               py: 1,
             }}
           >
-            Web Design
+           Website
           </Button>
           <Button
             variant={filter === "ml" ? "contained" : "outlined"}
@@ -184,7 +192,7 @@ const Projects = () => {
               py: 1,
             }}
           >
-            Machine Learning & AI
+             AI Application
           </Button>
         </Box>
 
