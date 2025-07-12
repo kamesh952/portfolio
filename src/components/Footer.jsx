@@ -118,7 +118,7 @@ const Footer = () => {
             <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2, gap: 1.5 }}>
               <LocationIcon fontSize="small" sx={{ color: 'primary.main', mt: '3px' }} />
               <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                Melpattampakkam, Cuddalore
+                Chrompet, Chennai
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2, gap: 1.5 }}>
@@ -130,7 +130,7 @@ const Footer = () => {
             <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
               <PhoneIcon fontSize="small" sx={{ color: 'primary.main', mt: '3px' }} />
               <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                www.linkedin.com/in/kamesh-r-326491363
+                www.linkedin.com/in/kamesh-ramesh
               </Typography>
             </Box>
           </Grid>

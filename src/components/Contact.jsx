@@ -100,7 +100,7 @@ const Contact = () => {
           {/* Contact Info */}
           <Box sx={{ width: { xs: "100%", md: "50%" }, order: { xs: 2, md: 1 } }}>
             {[
-              { icon: <LocationIcon />, title: "Location", value: "Melpattampakkam, Cuddalore" },
+              { icon: <LocationIcon />, title: "Location", value: "Chrompet, Chennai" },
               { icon: <EmailIcon />, title: "Email", value: "rkameshraj7@gmail.com", href: "mailto:rkameshraj7@gmail.com" },
               { icon: <PhoneIcon />, title: "Phone", value: "+91 86808 92898", href: "tel:+918680892898" }
             ].map(({ icon, title, value, href }, i) => (
@@ -120,8 +120,8 @@ const Contact = () => {
             {/* Socials */}
             <Box sx={{ display: "flex", gap: 2, mt: 4 }}>
               {[
-                { icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/your-profile" },
-                { icon: <GitHubIcon />, href: "https://github.com/your-profile" },
+                { icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/kamesh-ramesh/" },
+                { icon: <GitHubIcon />, href: "https://github.com/kamesh952" },
                 { icon: <FacebookIcon />, href: "https://facebook.com/your-profile" }
               ].map(({ icon, href }, i) => (
                 <IconButton key={i} href={href} target="_blank" rel="noopener noreferrer" sx={{
