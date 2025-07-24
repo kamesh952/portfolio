@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 import {
   Box,
   Typography,
@@ -122,7 +124,7 @@ const Contact = () => {
               {[
                 { icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/kamesh-ramesh/" },
                 { icon: <GitHubIcon />, href: "https://github.com/kamesh952" },
-                { icon: <FacebookIcon />, href: "https://facebook.com/your-profile" }
+                { icon: <InstagramIcon />, href: "https://www.instagram.com/itx__kamesh_ofxl.06/" }
               ].map(({ icon, href }, i) => (
                 <IconButton key={i} href={href} target="_blank" rel="noopener noreferrer" sx={{
                   width: "50px", height: "50px", borderRadius: "50%", backgroundColor: "light.main", color: "primary.main", transition: "all 0.3s ease",
