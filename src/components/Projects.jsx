@@ -98,16 +98,16 @@ const projects = [
     id: 10,
     title: "Event Hub - A Event Management System",
     category: "web", // Fixed: was "ML" instead of "ml"
-    image: "organic-fru.jpg", // Changed to more relevant image
+    image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg", // Changed to more relevant image
     tags: ["React", "Node js", "Express js", "PostgreSQL"],
     githubLink: "https://github.com/kamesh952/Event_Management",
     liveLink: "https://event-management-gs9r.onrender.com/" // Fixed: was pointing to wrong link
   },
   {
-    id: 1,
+    id: 11,
     title: "FreshMart - An E commerce Website",
     category: "web", // Fixed: was "ML" instead of "ml"
-    image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg", // Changed to more relevant image
+    image: "organic-fru.jpg", // Changed to more relevant image
     tags: ["React", "Node js", "Express js", "MongoDB"],
     githubLink: "https://github.com/kamesh952/fmart.git",
     liveLink: "https://fmart-frontend.onrender.com" // Fixed: was pointing to wrong link
