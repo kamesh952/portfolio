@@ -77,14 +77,15 @@ const projects = [
   },
   {
     id: 8,
-    title: "Tourism E-commerce Website - A Tourism Booking Project",
-    category: "web",
-    image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
-    tags: ["Front End", "UI/UX", "Vite/React"],
-    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git", // Fixed: was pointing to wrong repo
-    liveLink: "https://kalmholidays.onrender.com/",
-    featured: true,
+    title: "FreshMart - An E commerce Website",
+    category: "web", // Fixed: was "ML" instead of "ml"
+    image: "organic-fru.jpg", // Changed to more relevant image
+    tags: ["React", "Node js", "Express js", "MongoDB"],
+    githubLink: "https://github.com/kamesh952/fmart.git",
+    liveLink: "https://fmart-frontend.onrender.com",
+    featured:true,// Fixed: was pointing to wrong link
   },
+ 
   {
     id: 9,
     title: "Skill Sync AI - A Resume Analyzer AI",
@@ -103,15 +104,16 @@ const projects = [
     githubLink: "https://github.com/kamesh952/Event_Management",
     liveLink: "https://event-management-gs9r.onrender.com/" // Fixed: was pointing to wrong link
   },
-  {
-    id: 11,
-    title: "FreshMart - An E commerce Website",
-    category: "web", // Fixed: was "ML" instead of "ml"
-    image: "organic-fru.jpg", // Changed to more relevant image
-    tags: ["React", "Node js", "Express js", "MongoDB"],
-    githubLink: "https://github.com/kamesh952/fmart.git",
-    liveLink: "https://fmart-frontend.onrender.com" // Fixed: was pointing to wrong link
+   {
+    id:11,
+    title: "Tourism E-commerce Website - A Tourism Booking Project",
+    category: "web",
+    image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
+    tags: ["Front End", "UI/UX", "Vite/React"],
+    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git", // Fixed: was pointing to wrong repo
+    liveLink: "https://kalmholidays.onrender.com/",
   },
+  
 ];
 
 const Projects = () => {
