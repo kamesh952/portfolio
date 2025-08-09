@@ -1,18 +1,18 @@
 // components/Projects.jsx
 import React, { useState, useEffect } from "react";
-import { Box, Typography, Button, Card, CardMedia, Chip } from "@mui/material";
+import { Box, Typography, Button, Card, CardMedia, Chip, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import StarIcon from "@mui/icons-material/Star";
 
-// Sample projects data - replace with your actual projects
+// Sample projects data
 const projects = [
   {
     id: 1,
     title: "Version Text AI - Add text Behind Image",
     category: "ml",
-    image:
-      "https://vheer.com/_next/image?url=%2Fimages%2FlandingPages%2Ftext_behind_image%2Fmain_image_1.webp&w=3840&q=75",
+    image: "https://vheer.com/_next/image?url=%2Fimages%2FlandingPages%2Ftext_behind_image%2Fmain_image_1.webp&w=3840&q=75",
     tags: ["HTML", "UI/UX", "Javascript", "Image Rendering"],
     githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
     liveLink: "https://visiontest-ai.onrender.com/",
@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "Erase X Background Remover",
     category: "ml",
-    image: "erasex.jpg",
+    image: "/logo.png",
     tags: ["HTML", "UI/UX", "Javascript", "API Integration"],
     githubLink: "https://github.com/kamesh952/Erase-X.git",
     liveLink: "https://erase-x.onrender.com/",
@@ -32,8 +32,8 @@ const projects = [
     category: "web",
     image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
     tags: ["React", "Mongo DB", "Backend-Python"],
-    githubLink: "https://github.com/kamesh952/AuraStays.git",
-    liveLink: "https://aurastays.onrender.com/",
+    githubLink: "https://github.com/kamesh952/hotel_db_client.git",
+    liveLink: "https://hotel-db-client.onrender.com/",
   },
   {
     id: 4,
@@ -49,8 +49,7 @@ const projects = [
     id: 5,
     title: "Kalm Photo Editor",
     category: "ml",
-    image:
-      "https://media.istockphoto.com/id/1405395631/photo/professional-retoucher-working-on-graphic-tablet-at-desk-in-office.jpg?s=612x612&w=is&k=20&c=Oox3Ep4fnW3RvHt2Wc5znu9UWJaDYouE4zDAIVkRnbo=",
+    image: "https://media.istockphoto.com/id/1405395631/photo/professional-retoucher-working-on-graphic-tablet-at-desk-in-office.jpg?s=612x612&w=is&k=20&c=Oox3Ep4fnW3RvHt2Wc5znu9UWJaDYouE4zDAIVkRnbo=",
     tags: ["Python-Flask", "Python-Streamlit", "Python-CV"],
     githubLink: "https://github.com/kamesh952/Kalm_Photo_Editor.git",
     liveLink: "https://kalmphotoeditor.streamlit.app/",
@@ -59,8 +58,7 @@ const projects = [
     id: 6,
     title: "Convert iQ - Image format Converter",
     category: "ml",
-    image:
-      "https://content-management-files.canva.com/35bbc1b1-dc94-48c0-883f-1f0ffcb4fd8e/tools-feature_image-converter_lead_01_2x.jpg",
+    image: "https://content-management-files.canva.com/35bbc1b1-dc94-48c0-883f-1f0ffcb4fd8e/tools-feature_image-converter_lead_01_2x.jpg",
     tags: ["HTML", "UI/UX", "Javascript"],
     githubLink: "https://github.com/kamesh952/Convert-IQ.git",
     liveLink: "https://convert-iq.onrender.com/",
@@ -69,54 +67,54 @@ const projects = [
     id: 7,
     title: "AI Chatbot",
     category: "ml",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
     tags: ["Gemini API", "React/vite"],
     githubLink: "https://github.com/kamesh952/Kalm_ChatBot.git",
     liveLink: "https://kamesh952.github.io/Kalm_ChatBot/",
   },
   {
     id: 8,
-    title: "FreshMart - An E commerce Website",
-    category: "web", // Fixed: was "ML" instead of "ml"
-    image: "organic-fru.jpg", // Changed to more relevant image
+    title: "FreshMart - An E-commerce Website",
+    category: "web",
+    image: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg",
     tags: ["React", "Node js", "Express js", "MongoDB"],
     githubLink: "https://github.com/kamesh952/fmart.git",
     liveLink: "https://fmart-frontend.onrender.com",
-    featured:true,// Fixed: was pointing to wrong link
+    featured: true,
   },
- 
   {
     id: 9,
     title: "Skill Sync AI - A Resume Analyzer AI",
-    category: "ml", // Fixed: was "ML" instead of "ml"
-    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg", // Changed to more relevant image
+    category: "ml",
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg",
     tags: ["Node js", "Gemini API Integration", "HTML"],
     githubLink: "https://github.com/kamesh952/SkillSync-AI.git",
     liveLink: "https://skillsync-ai-3-mlru.onrender.com/"
   },
   {
     id: 10,
-    title: "Event Hub - A Event Management System",
-    category: "web", // Fixed: was "ML" instead of "ml"
-    image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg", // Changed to more relevant image
+    title: "Event Hub - An Event Management System",
+    category: "web",
+    image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg",
     tags: ["React", "Node js", "Express js", "PostgreSQL"],
     githubLink: "https://github.com/kamesh952/Event_Management",
-    liveLink: "https://event-db-client.onrender.com/" // Fixed: was pointing to wrong link
+    liveLink: "https://event-db-client.onrender.com/"
   },
-   {
-    id:11,
+  {
+    id: 11,
     title: "Tourism E-commerce Website - A Tourism Booking Project",
     category: "web",
     image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg",
     tags: ["Front End", "UI/UX", "Vite/React"],
-    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git", // Fixed: was pointing to wrong repo
+    githubLink: "https://github.com/kamesh952/Kalm_Holidays.git",
     liveLink: "https://kalmholidays.onrender.com/",
   },
-  
 ];
 
 const Projects = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   const [filter, setFilter] = useState("all");
   const [animated, setAnimated] = useState(false);
 
@@ -135,22 +133,21 @@ const Projects = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
+  const filteredProjects = filter === "all" 
+    ? projects 
+    : projects.filter((project) => project.category === filter);
 
-  // Unified project card component for consistent styling
-  const ProjectCard = ({ project, index, layout = "card" }) => {
+  const ProjectCard = ({ project, index }) => {
     const isML = project.category === "ml";
+    const useHorizontalLayout = (filter === "web" || filter === "ml") && !isMobile;
 
-    if (layout === "horizontal") {
+    if (useHorizontalLayout) {
       return (
         <Card
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
-            height: { xs: "auto", md: "320px" },
+            height: { xs: "auto", md: "300px" },
             borderRadius: "12px",
             overflow: "hidden",
             boxShadow: "0 6px 20px rgba(0, 0, 0, 0.1)",
@@ -173,9 +170,10 @@ const Projects = () => {
           <Box
             sx={{
               width: { xs: "100%", md: "45%" },
-              height: { xs: "220px", md: "100%" },
+              height: { xs: "200px", md: "100%" },
               overflow: "hidden",
               position: "relative",
+              minHeight: { xs: "200px", md: "auto" },
             }}
           >
             <CardMedia
@@ -192,7 +190,6 @@ const Projects = () => {
                 },
               }}
             />
-            {/* Category badge */}
             <Box
               sx={{
                 position: "absolute",
@@ -211,7 +208,6 @@ const Projects = () => {
             >
               {isML ? "AI Project" : "Web Project"}
             </Box>
-            {/* Featured badge */}
             {project.featured && (
               <Box
                 sx={{
@@ -236,7 +232,7 @@ const Projects = () => {
           <Box
             sx={{
               width: { xs: "100%", md: "55%" },
-              p: 3,
+              p: { xs: 2, md: 3 },
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -248,7 +244,7 @@ const Projects = () => {
                 sx={{
                   mb: 2,
                   fontWeight: 600,
-                  fontSize: { xs: "1.3rem", md: "1.5rem" },
+                  fontSize: { xs: "1.2rem", sm: "1.3rem", md: "1.4rem" },
                   lineHeight: 1.3,
                 }}
               >
@@ -292,6 +288,7 @@ const Projects = () => {
                   fontWeight: 600,
                   px: 3,
                   py: 1,
+                  fontSize: { xs: "12px", sm: "14px" },
                   backgroundColor: isML ? "#9c27b0" : "#1976d2",
                   "&:hover": {
                     backgroundColor: isML ? "#7b1fa2" : "#1565c0",
@@ -312,6 +309,7 @@ const Projects = () => {
                   fontWeight: 600,
                   px: 3,
                   py: 1,
+                  fontSize: { xs: "12px", sm: "14px" },
                   borderColor: isML ? "#9c27b0" : "#1976d2",
                   color: isML ? "#9c27b0" : "#1976d2",
                   "&:hover": {
@@ -334,7 +332,7 @@ const Projects = () => {
     return (
       <Card
         sx={{
-          height: project.featured ? "380px" : "320px",
+          height: { xs: "280px", sm: project.featured ? "350px" : "300px" },
           width: "100%",
           borderRadius: "12px",
           overflow: "hidden",
@@ -367,7 +365,6 @@ const Projects = () => {
           },
         }}
       >
-        {/* Featured/Category badge */}
         {(project.featured || isML) && (
           <Box
             sx={{
@@ -381,8 +378,8 @@ const Projects = () => {
                 : "#1976d2",
               color: "white",
               borderRadius: project.featured ? "50%" : "20px",
-              width: project.featured ? 40 : "auto",
-              height: project.featured ? 40 : "auto",
+              width: project.featured ? 36 : "auto",
+              height: project.featured ? 36 : "auto",
               px: project.featured ? 0 : 2,
               py: project.featured ? 0 : 0.5,
               display: "flex",
@@ -394,7 +391,7 @@ const Projects = () => {
               textTransform: project.featured ? "none" : "uppercase",
             }}
           >
-            {project.featured ? <StarIcon /> : "AI Project"}
+            {project.featured ? <StarIcon sx={{ fontSize: 20 }} /> : "AI Project"}
           </Box>
         )}
 
@@ -420,7 +417,6 @@ const Projects = () => {
             }}
           />
 
-          {/* Project name overlay */}
           <Box
             className="project-name"
             sx={{
@@ -431,8 +427,8 @@ const Projects = () => {
               background:
                 "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1))",
               color: "white",
-              p: 3,
-              fontSize: project.featured ? "1.6rem" : "1.4rem",
+              p: { xs: 2, sm: 3 },
+              fontSize: { xs: "1.2rem", sm: project.featured ? "1.5rem" : "1.3rem" },
               fontWeight: project.featured ? 600 : 500,
               transition: "all 0.3s ease",
               zIndex: 2,
@@ -441,7 +437,6 @@ const Projects = () => {
             {project.title}
           </Box>
 
-          {/* Hover overlay */}
           <Box
             className="project-overlay"
             sx={{
@@ -455,7 +450,7 @@ const Projects = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-end",
-              p: 3,
+              p: { xs: 2, sm: 3 },
               opacity: 0,
               transition: "opacity 0.3s ease",
               zIndex: 3,
@@ -466,13 +461,13 @@ const Projects = () => {
               sx={{
                 color: "white",
                 mb: 2,
-                fontSize: project.featured ? "1.5rem" : "1.25rem",
+                fontSize: { xs: "1.1rem", sm: project.featured ? "1.4rem" : "1.2rem" },
                 fontWeight: 600,
               }}
             >
               {project.title}
             </Typography>
-            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 3 }}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 2 }}>
               {project.tags.map((tag) => (
                 <Chip
                   key={tag}
@@ -481,14 +476,14 @@ const Projects = () => {
                   sx={{
                     backgroundColor: "rgba(255, 255, 255, 0.15)",
                     color: "white",
-                    fontSize: project.featured ? "13px" : "12px",
+                    fontSize: { xs: "10px", sm: project.featured ? "12px" : "11px" },
                     backdropFilter: "blur(5px)",
                     fontWeight: 500,
                   }}
                 />
               ))}
             </Box>
-            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+            <Box sx={{ display: "flex", gap: { xs: 1, sm: 2 }, flexWrap: "wrap" }}>
               <Button
                 variant="contained"
                 size="small"
@@ -499,11 +494,11 @@ const Projects = () => {
                 sx={{
                   backgroundColor: isML ? "#9c27b0" : "#1976d2",
                   color: "white",
-                  borderRadius: "10px",
-                  fontSize: project.featured ? "14px" : "12px",
+                  borderRadius: "8px",
+                  fontSize: { xs: "11px", sm: project.featured ? "13px" : "12px" },
                   fontWeight: 600,
-                  px: project.featured ? 2.5 : 2,
-                  py: project.featured ? 1 : 0.75,
+                  px: { xs: 1.5, sm: project.featured ? 2 : 1.5 },
+                  py: { xs: 0.5, sm: project.featured ? 0.75 : 0.5 },
                   "&:hover": {
                     backgroundColor: isML ? "#7b1fa2" : "#1565c0",
                   },
@@ -521,11 +516,11 @@ const Projects = () => {
                 sx={{
                   backgroundColor: "#333",
                   color: "white",
-                  borderRadius: "10px",
-                  fontSize: project.featured ? "14px" : "12px",
+                  borderRadius: "8px",
+                  fontSize: { xs: "11px", sm: project.featured ? "13px" : "12px" },
                   fontWeight: 600,
-                  px: project.featured ? 2.5 : 2,
-                  py: project.featured ? 1 : 0.75,
+                  px: { xs: 1.5, sm: project.featured ? 2 : 1.5 },
+                  py: { xs: 0.5, sm: project.featured ? 0.75 : 0.5 },
                   "&:hover": {
                     backgroundColor: "#555",
                   },
@@ -544,25 +539,24 @@ const Projects = () => {
     <Box
       id="projects"
       sx={{
-        py: { xs: 6, md: 10 },
+        py: { xs: 4, sm: 6, md: 8, lg: 10 },
         backgroundColor: "#f8f9fa",
       }}
     >
       <Box
         sx={{
-          width: "90%",
+          width: "100%",
           maxWidth: "1200px",
           mx: "auto",
-          px: { xs: 2, md: 4 },
+          px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {/* Header */}
         <Typography
           variant="h2"
           sx={{
             textAlign: "center",
-            mb: 2,
-            fontSize: { xs: "2.5rem", md: "3.5rem" },
+            mb: { xs: 1, sm: 2 },
+            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" },
             fontWeight: 700,
             background: "linear-gradient(45deg, #1976d2, #9c27b0)",
             backgroundClip: "text",
@@ -576,9 +570,9 @@ const Projects = () => {
           variant="body1"
           sx={{
             textAlign: "center",
-            mb: 6,
+            mb: { xs: 4, sm: 5, md: 6 },
             color: "text.secondary",
-            fontSize: "clamp(1rem, 2.5vw, 1.2rem)",
+            fontSize: { xs: "0.9rem", sm: "1rem", md: "1.1rem" },
             maxWidth: "600px",
             mx: "auto",
             lineHeight: 1.6,
@@ -587,14 +581,13 @@ const Projects = () => {
           Recent works I've done across web development and AI applications
         </Typography>
 
-        {/* Filter buttons */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
             flexWrap: "wrap",
-            gap: 2,
-            mb: 6,
+            gap: { xs: 1, sm: 2 },
+            mb: { xs: 4, sm: 5, md: 6 },
             opacity: animated ? 1 : 0,
             transform: animated ? "translateY(0)" : "translateY(50px)",
             transition: "opacity 0.6s ease, transform 0.6s ease",
@@ -611,12 +604,12 @@ const Projects = () => {
               onClick={() => setFilter(filterOption.key)}
               sx={{
                 borderRadius: "30px",
-                fontSize: "14px",
+                fontSize: { xs: "12px", sm: "14px" },
                 fontWeight: 600,
                 textTransform: "none",
-                px: 3,
-                py: 1.5,
-                minWidth: "140px",
+                px: { xs: 2, sm: 3 },
+                py: { xs: 1, sm: 1.5 },
+                minWidth: { xs: "100px", sm: "140px" },
                 transition: "all 0.3s ease",
                 ...(filter === filterOption.key && {
                   background: "linear-gradient(45deg, #1976d2, #9c27b0)",
@@ -629,19 +622,18 @@ const Projects = () => {
           ))}
         </Box>
 
-        {/* Projects grid */}
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns:
+            gridTemplateColumns: 
               filter === "web" || filter === "ml"
-                ? "1fr" // Single column for horizontal layout
+                ? "1fr"
                 : {
                     xs: "1fr",
                     sm: "repeat(2, 1fr)",
                     md: "repeat(3, 1fr)",
                   },
-            gap: 4,
+            gap: { xs: 3, sm: 4 },
             alignItems: "stretch",
           }}
         >
@@ -654,20 +646,13 @@ const Projects = () => {
                 transition: `opacity 0.6s ease ${
                   index * 0.1
                 }s, transform 0.6s ease ${index * 0.1}s`,
-                // Featured projects span full width in grid layout
                 ...(filter === "all" &&
                   project.featured && {
                     gridColumn: { xs: "1 / -1", sm: "1 / -1" },
                   }),
               }}
             >
-              <ProjectCard
-                project={project}
-                index={index}
-                layout={
-                  filter === "web" || filter === "ml" ? "horizontal" : "card"
-                }
-              />
+              <ProjectCard project={project} index={index} />
             </Box>
           ))}
         </Box>
