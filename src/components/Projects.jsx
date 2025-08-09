@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "Erase X Background Remover",
     category: "ml",
-    image: "logo.png",
+    image: "/logo.png",
     tags: ["HTML", "UI/UX", "Javascript", "API Integration"],
     githubLink: "https://github.com/kamesh952/Erase-X.git",
     liveLink: "https://erase-x.onrender.com/",
