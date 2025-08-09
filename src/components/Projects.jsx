@@ -102,7 +102,7 @@ const projects = [
     image: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg", // Changed to more relevant image
     tags: ["React", "Node js", "Express js", "PostgreSQL"],
     githubLink: "https://github.com/kamesh952/Event_Management",
-    liveLink: "https://event-management-gs9r.onrender.com/" // Fixed: was pointing to wrong link
+    liveLink: "https://event-db-client.onrender.com/" // Fixed: was pointing to wrong link
   },
    {
     id:11,
