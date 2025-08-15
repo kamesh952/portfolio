@@ -124,7 +124,7 @@ const Footer = () => {
             <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2, gap: 1.5 }}>
               <EmailIcon fontSize="small" sx={{ color: 'primary.main', mt: '3px' }} />
               <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                rkameshraj7@gmail.com
+               kameshramesh006@gmail.com
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>

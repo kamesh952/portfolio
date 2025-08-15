@@ -67,7 +67,7 @@ const projects = [
     id: 7,
     title: "AI Chatbot",
     category: "ml",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+    image: "https://static.vecteezy.com/system/resources/previews/027/776/370/non_2x/abstract-chatbot-ai-artificial-intelligence-chatbot-ai-is-a-software-application-used-to-chat-with-humans-with-network-technology-on-a-blue-background-vector.jpg",
     tags: ["Gemini API", "React/vite"],
     githubLink: "https://github.com/kamesh952/Kalm_ChatBot.git",
     liveLink: "https://kamesh952.github.io/Kalm_ChatBot/",
@@ -88,8 +88,8 @@ const projects = [
     category: "ml",
     image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg",
     tags: ["Node js", "Gemini API Integration", "HTML"],
-    githubLink: "https://github.com/kamesh952/SkillSync-AI.git",
-    liveLink: "https://skillsync-ai-3-mlru.onrender.com/"
+    githubLink: "https://github.com/kamesh952/skillsync_ai_client.git",
+    liveLink: "https://skillsync-ai-client.onrender.com/"
   },
   {
     id: 10,

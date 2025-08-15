@@ -61,7 +61,7 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        'service_0k1cgc7',    // replace
+        'service_ygo3aze',    // replace
         'template_7lf95ap',   // replace
         formData,
         'PeE-iFtBRlbe356_1'     // replace
@@ -103,7 +103,7 @@ const Contact = () => {
           <Box sx={{ width: { xs: "100%", md: "50%" }, order: { xs: 2, md: 1 } }}>
             {[
               { icon: <LocationIcon />, title: "Location", value: "Chrompet, Chennai" },
-              { icon: <EmailIcon />, title: "Email", value: "rkameshraj7@gmail.com", href: "mailto:rkameshraj7@gmail.com" },
+              { icon: <EmailIcon />, title: "Email", value: "kameshramesh006@gmail.com", href: "mailto:rkameshraj7@gmail.com" },
               { icon: <PhoneIcon />, title: "Phone", value: "+91 86808 92898", href: "tel:+918680892898" }
             ].map(({ icon, title, value, href }, i) => (
               <Box key={i} sx={{ display: "flex", alignItems: "flex-start", mb: 4, gap: 2, flexWrap: "wrap" }}>
